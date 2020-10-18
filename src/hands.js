@@ -12,7 +12,7 @@ const Hands = () => {
     }
     return (
         <>
-            {data.message}
+            {data && data.message}
             <button onClick={click}>Click me</button>
         </>
     )
