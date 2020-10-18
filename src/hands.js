@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useQuery } from 'react-query'
 import axios from 'axios';
 
@@ -10,9 +10,11 @@ const Hands = () => {
     const click = () => {
         console.log('test')
     }
+
+    useEffect(() => {console.log(data)},[data])
     return (
         <>
-            {data && data.message}
+            <p>{data && data.message}</p>
             <button onClick={click}>Click me</button>
         </>
     )
